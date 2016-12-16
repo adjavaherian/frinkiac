@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npm test"
+    "test": "node test"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,9 @@
     "api",
     "simpsons",
     "frinkiac",
-    "comedy"
+    "comedy",
+    "humor",
+    "television"
   ],
   "author": "@adjavaherian",
   "license": "MIT",
@@ -31,6 +33,7 @@
     "query-string": "^4.2.3"
   },
   "devDependencies": {
+    "nock": "^9.0.2",
     "tape": "^4.6.3"
   }
 }
