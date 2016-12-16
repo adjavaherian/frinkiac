@@ -2,7 +2,7 @@
   "name": "frinkiac",
   "version": "1.0.0",
   "description": "A Universal JavaScript wrapper for the Frinkiac API",
-  "main": "src/index.js",
+  "main": "index.js",
   "directories": {
     "example": "examples",
     "test": "test"

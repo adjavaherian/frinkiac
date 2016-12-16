@@ -29,7 +29,7 @@ test('search', function(t) {
                 .reply(200, [ { Id: 541909, Episode: 'S05E03', Timestamp: 512110 } ]);
 
     frinkiac.search('smrt')
-        .then(function(res){
+        .then(function(res) {
             if (res.status !== 200) {
                 throw res;
             } else {
