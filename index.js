@@ -1,25 +1,24 @@
 // index.js ho hoi!
 'use strict';
 
-var axios = require('axios');
-var queryString = require('query-string');
-var util = require('util');
+const axios = require('axios');
+const queryString = require('query-string');
+const util = require('util');
 
-var SEARCH_URL = 'https://frinkiac.com/api/search?%s';
-var MEME_URL = 'https://frinkiac.com/meme/%s/%s?%s';
-var CAPTION_URL = 'https://frinkiac.com/api/caption?%s';
+const SEARCH_URL = 'https://frinkiac.com/api/search?%s';
+const MEME_URL = 'https://frinkiac.com/meme/%s/%s?%s';
+const CAPTION_URL = 'https://frinkiac.com/api/caption?%s';
 
-exports.memeMap = function(item, key) {
+exports.memeMap = (item, key) => {
     return this.memeURL(item.Episode, item.Timestamp);
-}
+};
 
-exports.searchURL = function(q) {
+exports.searchURL = q => {
     q = queryString.stringify({ q: q || '' });
     return util.format(SEARCH_URL, q);
-}
+};
 
-exports.memeURL = function(episode, timestamp, caption) {
-
+exports.memeURL = (episode, timestamp, caption) => {
     episode = episode || 'S04E17';
     timestamp = timestamp || '797262';
     caption = caption || '';
@@ -32,37 +31,35 @@ exports.memeURL = function(episode, timestamp, caption) {
         caption = window.btoa(caption);
     }
 
-    var query = queryString.stringify({
+    const query = queryString.stringify({
         b64lines: caption
     });
 
     return util.format(MEME_URL, episode, timestamp, query);
-}
+};
 
-exports.captionURL = function(episode, timestamp) {
+exports.captionURL = (episode, timestamp) => {
     //e=%s&t=%s
     episode = episode || 'S04E17';
     timestamp = timestamp || '797262';
 
-    var query = queryString.stringify({
+    const query = queryString.stringify({
         e: episode,
         t: timestamp
     });
 
     return util.format(CAPTION_URL, query);
-}
+};
 
-exports.search = function(q) {
-
+exports.search = q => {
     q = q || '';
-    var query = queryString.stringify({ q: q });
+    const query = queryString.stringify({ q: q });
 
     return axios(this.searchURL(q))
-        .catch(function(err) {
+        .catch(err => {
             return err;
         })
-        .then(function(res) {
+        .then(res => {
             return res;
         });
-
-}
+};

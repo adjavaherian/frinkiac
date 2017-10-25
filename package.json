@@ -1,39 +1,41 @@
 {
-  "name": "frinkiac",
-  "version": "1.0.0",
-  "description": "A Universal JavaScript wrapper for the Frinkiac API",
-  "main": "index.js",
-  "directories": {
-    "example": "examples",
-    "test": "test"
-  },
-  "scripts": {
-    "test": "node test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adjavaherian/frinkiac.git"
-  },
-  "keywords": [
-    "api",
-    "simpsons",
-    "frinkiac",
-    "comedy",
-    "humor",
-    "television"
-  ],
-  "author": "@adjavaherian",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/adjavaherian/frinkiac/issues"
-  },
-  "homepage": "https://github.com/adjavaherian/frinkiac#readme",
-  "dependencies": {
-    "axios": "^0.15.3",
-    "query-string": "^4.2.3"
-  },
-  "devDependencies": {
-    "nock": "^9.0.2",
-    "tape": "^4.6.3"
-  }
+    "name": "frinkiac",
+    "version": "1.0.1",
+    "description": "A Universal JavaScript wrapper for the Frinkiac API",
+    "main": "index.js",
+    "directories": {
+        "example": "examples",
+        "test": "test"
+    },
+    "scripts": {
+        "test": "node test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/adjavaherian/frinkiac.git"
+    },
+    "keywords": ["api", "simpsons", "frinkiac", "comedy", "humor", "television", "tv", "funny", "channel"],
+    "contributors": [
+        {
+            "name": "adjavaherian"
+        },
+        {
+            "name": "Bharathvaj Ganesan",
+            "email": "bharathvaj1995@gmail.com",
+            "url": "www.bharathvaj.me"
+        }
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/adjavaherian/frinkiac/issues"
+    },
+    "homepage": "https://github.com/adjavaherian/frinkiac#readme",
+    "dependencies": {
+        "axios": "^0.15.3",
+        "query-string": "^4.2.3"
+    },
+    "devDependencies": {
+        "nock": "^9.0.2",
+        "tape": "^4.6.3"
+    }
 }
